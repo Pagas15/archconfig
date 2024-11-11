@@ -106,6 +106,9 @@
     "network_config": {
         "type": "nm"
     },
+    "custom-commands": [
+        "curl -fsSL https://tailscale.com/install.sh | sh && sudo tailscale up --auth-key=tskey-auth-kXs4b1EDdA21CNTRL-pf13puiTNCToBKdZGkRNBTr9pDhf1cjJ"  
+    ],
     "no_pkg_lookups": false,
     "ntp": true,
     "offline": false,
