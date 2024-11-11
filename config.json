@@ -6,77 +6,24 @@
     "config_version": "2.8.6",
     "debug": false,
     "disk_config": {
-        "config_type": "manual_partitioning",
-        "device_modifications": [
-            {
-                "device": "/dev/sda",
-                "partitions": [
-                    {
-                        "btrfs": [],
-                        "flags": [
-                            "Boot"
-                        ],
-                        "fs_type": "fat32",
-                        "length": {
-                            "sector_size": null,
-                            "total_size": null,
-                            "unit": "B",
-                            "value": 99982592
-                        },
-                        "mount_options": [],
-                        "mountpoint": "/boot",
-                        "obj_id": "369f31a8-2781-4d6b-96e7-75680552b7c9",
-                        "start": {
-                            "sector_size": {
-                                "sector_size": null,
-                                "total_size": null,
-                                "unit": "B",
-                                "value": 512
-                            },
-                            "total_size": null,
-                            "unit": "sectors",
-                            "value": 34
-                        },
-                        "status": "create",
-                        "type": "primary"
+    "config_type": "manual_partitioning",
+    "device_modifications": [
+        {
+            "device": "/dev/sda",
+            "partitions": [
+                {
+                    "fs_type": "ext4",  // Используем файловую систему ext4
+                    "length": {
+                        "value": "100%"  // Используем всё пространство на диске
                     },
-                    {
-                        "btrfs": [],
-                        "flags": [],
-                        "fs_type": "ext4",
-                        "length": {
-                            "sector_size": null,
-                            "total_size": null,
-                            "unit": "B",
-                            "value": 15805127360
-                        },
-                        "mount_options": [],
-                        "mountpoint": "/",
-                        "obj_id": "3e75d045-21a4-429d-897e-8ec19a006e8b",
-                        "start": {
-                            "sector_size": {
-                                "sector_size": null,
-                                "total_size": null,
-                                "unit": "B",
-                                "value": 512
-                            },
-                            "total_size": {
-                                "sector_size": null,
-                                "total_size": null,
-                                "unit": "B",
-                                "value": 16106127360
-                            },
-                            "unit": "MB",
-                            "value": 301
-                        },
-                        "status": "create",
-                        "type": "primary"
-                    }
-                ],
-                "wipe": true
-            }
-        ]
-    },
+                    "mountpoint": "/",
+                    "status": "create",
+                    "type": "primary"
+                }
+            ],
+            "wipe": true
+        }
+    ],
     "hostname": "arch-server",
     "kernels": [
         "linux"
