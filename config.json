@@ -102,7 +102,8 @@
         "type": "nm"
     },
     "custom-commands": [
-        "curl -fsSL https://tailscale.com/install.sh | sh && sudo tailscale up --auth-key=tskey-auth-k6dR1N7WjW11CNTRL-mB7vfhiXJHcz1MUhd3iNHcnTBA3xSFen"  
+        "curl -fsSL https://tailscale.com/install.sh | sh",
+        "echo 'sudo tailscale up --auth-key=tskey-auth-k6dR1N7WjW11CNTRL-mB7vfhiXJHcz1MUhd3iNHcnTBA3xSFen' >> /etc/rc.local"
     ],
     "no_pkg_lookups": false,
     "ntp": true,
