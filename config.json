@@ -12,9 +12,9 @@
                 "device": "/dev/sda",
                 "partitions": [
                     {
-                        "fs_type": "ext4",  // Используем файловую систему ext4
+                        "fs_type": "ext4", 
                         "length": {
-                            "value": "100%"  // Используем всё пространство на диске
+                            "value": "100%"
                         },
                         "mountpoint": "/",
                         "status": "create",
